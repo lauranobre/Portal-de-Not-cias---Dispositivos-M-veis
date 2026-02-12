@@ -13,16 +13,7 @@ const LoginScreen = () => {
           <Image 
             source={require("../assets/images/logo.png")} 
             style={Styles.logo} 
-            resizeMode="contain" // Garante que o logo apareça inteiro
-          />
-        </View>
-
-        {/* HEADER HERO */}
-        <View style={Styles.header}>
-          <Image 
-            source={require("../assets/images/imagemHero.png")} 
-            style={Styles.heroImage} 
-            resizeMode="cover" // Cobre a área sem deformar
+            resizeMode="contain" 
           />
         </View>
 
@@ -31,7 +22,6 @@ const LoginScreen = () => {
           
           <Text style={Styles.title}>Portal de Notícias</Text>
 
-          {/* CONTENT (Texto de boas vindas) */}
           <View style={Styles.content}>
             <Text style={Styles.welcomeTitle}>Bem-vindo ao Portal Notícias Hoje</Text>
             <Text style={Styles.welcomeSubtitle}>
@@ -40,7 +30,7 @@ const LoginScreen = () => {
           </View>
 
 
-          {/* --- CARD 1: NOTÍCIA PRINCIPAL --- */}
+          {/* --- NOTÍCIA PRINCIPAL --- */}
           <View style={Styles.card}>
             <Image 
               source={require("../assets/images/noticia1.png")} 
@@ -56,7 +46,7 @@ const LoginScreen = () => {
             </View>
           </View>
 
-          {/* --- CARD 2 --- */}
+          {/*CARD 2*/}
           <View style={Styles.card}>
             <Image 
               source={require("../assets/images/noticia2.png")} 
@@ -72,7 +62,7 @@ const LoginScreen = () => {
             </View>
           </View>
 
-          {/* --- CARD 3 --- */}
+          {/*CARD 3*/}
           <View style={Styles.card}>
             <Image 
               source={require("../assets/images/noticia3.png")} 
@@ -105,7 +95,7 @@ const LoginScreen = () => {
 const Styles = StyleSheet.create({
   scrollView: {
     flex: 1,
-    backgroundColor: "#F0F0F0", // Fundo cinza claro geral
+    backgroundColor: "#F0F0F0", 
   },
   body: {
     flex: 1,
@@ -121,22 +111,13 @@ const Styles = StyleSheet.create({
     width: '100%',
   },
   logo: {
-    width: 180,  // Tamanho controlado
+    width: 180, 
     height: 60,
-  },
-
-  // HERO IMAGE
-  header: {
-    width: "100%",
-  },
-  heroImage: {
-    width: "100%",
-    height: 200, // Altura fixa
   },
 
   // CONTAINER DO CONTEÚDO
   container: {
-    padding: 16, // Espaçamento lateral da tela
+    padding: 16, 
     alignItems: "center",
   },
 
@@ -166,17 +147,17 @@ const Styles = StyleSheet.create({
     textAlign: "center",
   },
 
-  // --- ESTILO DOS CARDS (IGUAL À REFERÊNCIA) ---
+  // --- ESTILO DOS CARDS ---
   card: {
     backgroundColor: "#FFFFFF",
-    borderRadius: 12,        // Borda arredondada
-    marginBottom: 20,        // Espaço entre um card e outro
-    width: "100%",           // Ocupa a largura total disponível
-    overflow: "hidden",      // Garante que a imagem respeite a borda arredondada
+    borderRadius: 12,     
+    marginBottom: 20,       
+    width: "100%",           
+    overflow: "hidden",      
     
     // Sombra (Efeito 3D)
-    elevation: 4,            // Sombra para Android
-    shadowColor: "#000",     // Sombra para iOS
+    elevation: 4,            
+    shadowColor: "#000",    
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 4,
@@ -184,12 +165,12 @@ const Styles = StyleSheet.create({
   
   cardImage: {
     width: "100%",
-    height: 180,             // Altura padrão para as imagens
-    resizeMode: "cover",     // Corta as bordas para preencher o espaço
+    height: 180,             
+    resizeMode: "cover",     
   },
   
   cardContent: {
-    padding: 16,             // Espaçamento interno do texto
+    padding: 16,             
   },
   
   cardTitle: {
@@ -204,7 +185,7 @@ const Styles = StyleSheet.create({
     fontSize: 14,
     color: "#555",
     lineHeight: 20,
-    textAlign: "justify",    // Texto justificado fica mais elegante
+    textAlign: "justify",    
   },
 
   // RODAPÉ
